@@ -1,4 +1,4 @@
-import { Task } from '../interfaces/Task'
+import { TaskDefn } from '../interfaces/Task'
 export const TASKS: Task[] = [
   {
     id: 1,

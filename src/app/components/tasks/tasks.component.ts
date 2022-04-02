@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { Task } from '../../interfaces/Task'
+import { TaskDefn } from '../../interfaces/Task'
 import { TASKS } from '../../mocks/mock-taks'
 
 @Component({
