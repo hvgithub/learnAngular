@@ -6,7 +6,16 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  title: string = 'sriramajayam'
+
   constructor () {}
 
   ngOnInit (): void {}
+
+  toggleAddTask () {
+    alert('I am here')
+  }
+  helloWorld () {
+    alert('2nd button func - hello wrold')
+  }
 }
