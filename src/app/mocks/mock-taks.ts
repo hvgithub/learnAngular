@@ -1,5 +1,5 @@
 import { TaskDefn } from '../interfaces/Task'
-export const TASKS: Task[] = [
+export const TASKS: TaskDefn[] = [
   {
     id: 1,
     text: 'Doctors Appointment',

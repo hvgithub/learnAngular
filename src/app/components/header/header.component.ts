@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit (): void {}
 
-  toggleAddTaskDefn () {
+  toggleAddTask () {
     alert('I am here')
   }
   helloWorld () {

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
+import { TaskService } from 'src/app/services/task.service'
 import { TaskDefn } from '../../interfaces/Task'
-import { TASKS } from '../../mocks/mock-taks'
 
 @Component({
   selector: 'app-tasks',
@@ -8,8 +8,12 @@ import { TASKS } from '../../mocks/mock-taks'
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  comptasks: Task[] = TASKS
-  constructor () {}
+  comptasks: TaskDefn[] = []
+  constructor (private localTaskService: TaskService) {}
 
-  ngOnInit (): void {}
+  ngOnInit (): void {
+    this.localTaskService
+      .getTasks()
+      .subscribe(tasks => (this.comptasks = tasks))
+  }
 }

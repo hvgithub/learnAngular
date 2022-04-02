@@ -9,7 +9,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 })
 export class TaskItemComponent implements OnInit {
   faTimes = faTimes
-  @Input() task: Task
+  @Input() task: TaskDefn
   constructor () {}
 
   ngOnInit (): void {}
