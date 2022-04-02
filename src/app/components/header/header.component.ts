@@ -8,7 +8,5 @@ import { Component, OnInit } from '@angular/core'
 export class HeaderComponent implements OnInit {
   constructor () {}
 
-  //Life cycle method
-  //http
   ngOnInit (): void {}
 }
