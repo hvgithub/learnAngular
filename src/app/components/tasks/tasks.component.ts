@@ -16,4 +16,17 @@ export class TasksComponent implements OnInit {
       .getTasks()
       .subscribe(tasks => (this.comptasks = tasks))
   }
+
+  deleteTask (task: TaskDefn) {
+    console.log('I am here', task.id)
+    this.localTaskService.deleteTasksSrv(task).subscribe(() =>
+      this.comptasks.filter(item => {
+        item.id !== task.id
+      })
+    )
+  }
+  updateReminder (task: TaskDefn) {
+    task.reminder = !task.reminder
+    this.localTaskService.updateTaskSrv(task).subscribe()
+  }
 }
