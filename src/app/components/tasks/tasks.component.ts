@@ -29,4 +29,10 @@ export class TasksComponent implements OnInit {
     task.reminder = !task.reminder
     this.localTaskService.updateTaskSrv(task).subscribe()
   }
+
+  addTaskSrv (task: TaskDefn) {
+    this.localTaskService.addTaskSrv(task).subscribe(task => {
+      this.comptasks.push(task)
+    })
+  }
 }

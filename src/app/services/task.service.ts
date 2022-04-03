@@ -28,4 +28,9 @@ export class TaskService {
     const url = `${this.apiUrl}/${task.id}`
     return this.http.put<TaskDefn>(url, task, httpOptions)
   }
+  addTaskSrv (task: TaskDefn) {
+    console.log('Adding task...', task)
+    const url = `${this.apiUrl}/${task}`
+    return this.http.post<TaskDefn>(this.apiUrl, task, httpOptions)
+  }
 }
